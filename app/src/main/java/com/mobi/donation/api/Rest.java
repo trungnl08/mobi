@@ -83,7 +83,23 @@ public class Rest {
 
 		return response;
 	}
+	public static String deleteAll(String url) {
 
+		String response = null;
+
+		try {
+			setup(url);
+			httpCon.setRequestMethod("HEAD");
+			httpCon.connect();
+			response = httpCon.getResponseMessage();
+		}
+
+		catch (Exception e) {
+			Log.v("donate","DELETE REQUEST ERROR" + e.getMessage());
+		}
+
+		return response;
+	}
 	public static String put(String url, String json) {
 		String result = "";
 		/*try {

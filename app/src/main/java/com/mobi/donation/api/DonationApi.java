@@ -11,7 +11,6 @@ import java.util.List;
 
 
 public class DonationApi {
-	//////////////////////////////////////////////////////////////////////////////////
 	public static List<Donation> getAll(String call) {
 		String json = Rest.get(call);
 		//Log.v("donate", "JSON RESULT : " + json);
@@ -19,7 +18,6 @@ public class DonationApi {
 		
 		return new Gson().fromJson(json, collectionType);
 	}
-	//////////////////////////////////////////////////////////////////////////////////
 	public static Donation get(String call,String id) {
 		String json = Rest.get(call + "/" + id);
 		Log.v("donate", "JSON RESULT : " + json);
@@ -27,15 +25,12 @@ public class DonationApi {
 
 		return new Gson().fromJson(json, objType);
 	}
-	//////////////////////////////////////////////////////////////////////////////////
 	public static String deleteAll(String call) {
-		return Rest.delete(call);
+		return Rest.deleteAll(call);
 	}
-	//////////////////////////////////////////////////////////////////////////////////
 	public static String delete(String call, String id) {
 		return Rest.delete(call + "/" + id);
 	}
-	//////////////////////////////////////////////////////////////////////////////////
 	public static String insert(String call,Donation donation) {
 		Type objType = new TypeToken<Donation>(){}.getType();
 		String json = new Gson().toJson(donation, objType);

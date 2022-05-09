@@ -291,7 +291,6 @@ public class Donate extends Base {
         protected String doInBackground(Object... params) {
             String res = null;
             try {
-                Log.v("ids", String.valueOf(params[1]));
                 res = DonationApi.deleteAll((String) params[0]);
             } catch (Exception e) {
                 Log.v("donate", " RESET ERROR : " + e);
