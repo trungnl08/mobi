@@ -84,7 +84,6 @@ public class Report extends Base {
 
             ImageView imgDelete = (ImageView) view.findViewById(R.id.imgDelete);
             imgDelete.setTag(donation);
-//            imgDelete.setOnClickListener((View.OnClickListener) Report.this);
             imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -126,7 +125,7 @@ public class Report extends Base {
     }
 
 
-    //    GET ALL TASK
+    //    GET ALL
     private class GetAllTask extends AsyncTask<String, Void, List<Donation>> {
         protected ProgressDialog dialog;
         protected Context context;
@@ -174,7 +173,7 @@ public class Report extends Base {
         }
     }
 
-    //    GET TASK
+    //    GET
     private class GetTask extends AsyncTask<String, Void, Donation> {
         protected ProgressDialog dialog;
         protected Context context;
@@ -215,7 +214,7 @@ public class Report extends Base {
         }
     }
 
-    //  DELETE TASK
+    //  DELETE
     private class DeleteTask extends AsyncTask<String, Void, String> {
         protected ProgressDialog dialog;
         protected Context context;
