@@ -41,7 +41,7 @@ public class Donate extends Base {
     private ProgressBar progressBar;
     private EditText amountText;
     private TextView amountTotal;
-
+    private Button buttonTest;
     private int amountOfDonating = 0;
 
     @Override
@@ -80,8 +80,17 @@ public class Donate extends Base {
         amountTotal.setText(String.format("%d$", app.totalDonated));
 
         amountText.setInputType(InputType.TYPE_CLASS_NUMBER);
+        buttonTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String message;
 
 
+
+            }
+
+        });
         donateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -230,6 +239,7 @@ public class Donate extends Base {
         }
     }
 
+
     //    INSERT DONATE
     private class InsertTask extends AsyncTask<Object, Void, String> {
         protected ProgressDialog dialog;
@@ -309,6 +319,7 @@ public class Donate extends Base {
                 dialog.dismiss();
         }
     }
+
 
 
 }

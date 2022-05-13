@@ -1,0 +1,26 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "how to usr json-server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js",
+    "start": "npm run generate-data && node main.js",
+    "generate-data": "node generate-data.js"
+  },
+  "keywords": [
+    "json-server"
+  ],
+  "author": "trunguet",
+  "license": "MIT",
+  "dependencies": {
+    "faker": "^5.5.3",
+    "npm": "^8.9.0",
+    "query-string": "^7.0.1"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.15"
+  }
+}

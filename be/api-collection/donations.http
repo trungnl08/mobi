@@ -1,0 +1,30 @@
+@baseUrl=http://localhost:4000/api
+@resourceName=donations
+
+# @name getAllproducts
+GET {{baseUrl}}/{{resourceName}}
+
+###
+
+# @name addNew
+# POST {{baseUrl}}
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "amount": 1700,
+    "paymentType": "Direct",
+    "upvotes": 0
+}
+
+###
+# @name Delete
+DELETE  {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+###
+# @name DeleteAll
+HEAD  {{baseUrl}}/{{resourceName}}
+
+###
+
